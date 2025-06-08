@@ -1,0 +1,14 @@
+{% for entry in entry_list %}
+    <article>
+        {# Mostrar la fecha con clase del día de la semana #}
+        <h2 class="{{ entry.date_created|date:'l' }}">
+            {{ entry.date_created|date:'Y-m-d H:i' }}
+        </h2>   
+        <h3>
+            {# Enlace al detalle de la entrada #}
+            <a href="{% url 'entry-detail' entry.id %}">
+                {{ entry.title }}
+            </a>
+        </h3>
+    </article>
+{% endfor %}
