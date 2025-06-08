@@ -2,7 +2,7 @@
     <article>
         {# Mostrar la fecha con clase del día de la semana #}
         <h2 class="{{ entry.date_created|date:'l' }}">
-            {{ entry.date_created|date:'Y-m-d H:i' }}
+            {{ entry.created_at|date:'Y-m-d H:i' }}
         </h2>   
         <h3>
             {# Enlace al detalle de la entrada #}
